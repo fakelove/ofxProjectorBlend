@@ -188,6 +188,7 @@ void ofxProjectorBlend::draw(float x, float y) {
 		}
 		else {
 			blendShader.setUniform1f("OverlapTop", pixelOverlap);
+            blendShader.setUniform1f("OverlapRight", pixelOverlap);	
 		}
 		
 		blendShader.setUniformTexture("Tex0", fullTexture.getTextureReference(), 0);
@@ -207,6 +208,7 @@ void ofxProjectorBlend::draw(float x, float y) {
 				}
 				else {
 					blendShader.setUniform1f("OverlapBottom", pixelOverlap);
+                    blendShader.setUniform1f("OverlapLeft", pixelOverlap);
 				}
 				
 			}
@@ -218,6 +220,7 @@ void ofxProjectorBlend::draw(float x, float y) {
 				}
 				else {
 					blendShader.setUniform1f("OverlapTop", 0);
+                    blendShader.setUniform1f("OverlapRight", pixelOverlap);
 				}
 			}
 			
